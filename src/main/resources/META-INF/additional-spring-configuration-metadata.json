@@ -1,0 +1,18 @@
+{
+  "properties": [
+    {
+      "name": "backend.url",
+      "type": "java.lang.String",
+      "description": "Description for backend.url."
+    },
+    {
+      "name": "instance.id",
+      "type": "java.lang.String",
+      "description": "Description for instance.id."
+    },
+    {
+      "name": "secret",
+      "type": "java.lang.String",
+      "description": "Description for secret."
+    }
+  ] }
