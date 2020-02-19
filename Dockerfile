@@ -4,7 +4,6 @@ WORKDIR /src
 RUN ["chmod", "777", "./mvnw"]
 RUN ./mvnw package -DskipTests
 
-
 FROM alpine:3.10.3 as packager
 RUN apk --no-cache add openjdk11-jdk openjdk11-jmods
 ENV JAVA_MINIMAL="/opt/java-minimal"
@@ -16,7 +15,6 @@ RUN /usr/lib/jvm/java-11-openjdk/bin/jlink \
     --compress 2 --strip-debug --no-header-files --no-man-pages \
     --release-info="add:IMPLEMENTOR=radistao:IMPLEMENTOR_VERSION=radistao_JRE" \
     --output "$JAVA_MINIMAL"
-
 
 FROM alpine:3.10.3
 LABEL maintainer="Maksim Iunusov maksim@iunusov.ru"
