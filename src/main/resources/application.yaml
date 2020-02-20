@@ -15,6 +15,12 @@ spring:
   application:
     name: Gateway
 
+# Zipkin info
+  zipkin:
+    base-url: http://zipkin:9411/
+  sleuth:
+    sampler.probability: 1
+
 management:
   metrics:
     enable:
@@ -40,3 +46,4 @@ logging:
   level:
     org.springframework.web: INFO
     guru.springframework.controllers: INFO
+
