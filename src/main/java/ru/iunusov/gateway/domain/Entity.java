@@ -9,9 +9,9 @@ import lombok.experimental.Accessors;
 
 @RequiredArgsConstructor
 @Getter
-@Accessors(fluent = true)
 @ToString
 public abstract class Entity {
+
   private final String id;
   private final String name;
 

@@ -18,8 +18,8 @@ public class EndpointController {
 
   private final EndpointService service;
 
-  @GetMapping("/")
-  public List<User> getRequestsCount() {
+  @GetMapping("/users")
+  public List<User> getUsers() {
     var users = service.users();
     log.info(users.stream().map(Objects::toString).collect(Collectors.joining(", ")));
     return users;

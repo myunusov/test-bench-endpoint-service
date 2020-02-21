@@ -40,7 +40,7 @@ public class BackendAdapterTests {
                 MediaType.APPLICATION_JSON));
     final var users = backendAdapter.users();
     assertThat(users.size()).isEqualTo(1);
-    assertThat(users.get(0).id()).isEqualTo("id");
-    assertThat(users.get(0).name()).isEqualTo("name");
+    assertThat(users.get(0).getId()).isEqualTo("id");
+    assertThat(users.get(0).getName()).isEqualTo("name");
   }
 }
