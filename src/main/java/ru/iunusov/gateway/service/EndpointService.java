@@ -1,5 +1,7 @@
 package ru.iunusov.gateway.service;
 
+import java.util.List;
+
 import io.micrometer.core.instrument.Counter;
 import io.micrometer.core.instrument.MeterRegistry;
 import io.micrometer.core.instrument.Timer;
@@ -7,6 +9,7 @@ import lombok.SneakyThrows;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import ru.iunusov.gateway.adapter.BackendAdapter;
+import ru.iunusov.gateway.domain.User;
 
 @Component
 public class EndpointService {
@@ -36,13 +39,12 @@ public class EndpointService {
   }
 
   @SneakyThrows
-  public String message() {
-    if (Math.random() < .1) {
+  public List<User> message() {
+    try {
+      return timer.recordCallable(backendAdapter::users);
+    } catch (RuntimeException e) {
       counter.increment(1.0);
-      throw new IllegalStateException("System Error");
+      throw e;
     }
-    final var result = timer.recordCallable(backendAdapter::getRequests);
-    return String.format("Number of requests %s (gateway %d, secret %s)",
-        result, instanceId, secret);
   }
 }
