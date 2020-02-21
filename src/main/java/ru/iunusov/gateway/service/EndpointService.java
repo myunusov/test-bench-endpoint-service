@@ -39,7 +39,7 @@ public class EndpointService {
   }
 
   @SneakyThrows
-  public List<User> message() {
+  public List<User> users() {
     try {
       return timer.recordCallable(backendAdapter::users);
     } catch (RuntimeException e) {

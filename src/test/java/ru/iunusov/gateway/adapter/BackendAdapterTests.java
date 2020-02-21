@@ -1,10 +1,13 @@
 package ru.iunusov.gateway.adapter;
+import java.util.List;
+
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.autoconfigure.web.client.RestClientTest;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.client.MockRestServiceServer;
+import ru.iunusov.gateway.domain.User;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.springframework.test.web.client.match.MockRestRequestMatchers.requestTo;
@@ -23,9 +26,21 @@ public class BackendAdapterTests {
   private String backendUrl;
 
   @Test
-  public void getRequests_okResponse() {
-    server.expect(requestTo(backendUrl + "/requests"))
-        .andRespond(withSuccess("1", MediaType.APPLICATION_JSON));
-    assertThat(backendAdapter.getRequests()).isEqualTo("1");
+  public void getUsers_okResponse() {
+    server
+        .expect(requestTo(backendUrl + "/users"))
+        .andRespond(
+            withSuccess(
+                "[\n"
+                    + "  {\n"
+                    + "    \"id\": \"id\", \n"
+                    + "    \"name\": \"name\"\n"
+                    + "  }\n"
+                    + "]\n",
+                MediaType.APPLICATION_JSON));
+    final var users = backendAdapter.users();
+    assertThat(users.size()).isEqualTo(1);
+    assertThat(users.get(0).id()).isEqualTo("id");
+    assertThat(users.get(0).name()).isEqualTo("name");
   }
 }
