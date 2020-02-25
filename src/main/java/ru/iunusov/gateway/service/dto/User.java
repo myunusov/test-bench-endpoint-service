@@ -1,4 +1,6 @@
-package ru.iunusov.gateway.domain;
+package ru.iunusov.gateway.service.dto;
+
+import java.util.Objects;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
@@ -8,14 +10,33 @@ import lombok.ToString;
 
 @ToString(callSuper = true)
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class User extends Entity {
+@Getter
+public class User {
+
+  private final String id;
+
+  private final String name;
 
   @JsonCreator
   public User(
       @JsonProperty(value = "id", required = true) final String id,
       @JsonProperty(value = "name", required = true) final String name
   ) {
-    super(id, name);
+    this.id = id;
+    this.name = name;
+  }
+
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) return true;
+    if (o == null || getClass() != o.getClass()) return false;
+    User user = (User) o;
+    return id.equals(user.id);
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(id);
   }
 
 }

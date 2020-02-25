@@ -9,7 +9,7 @@ import lombok.SneakyThrows;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import ru.iunusov.gateway.adapter.BackendAdapter;
-import ru.iunusov.gateway.domain.User;
+import ru.iunusov.gateway.service.dto.User;
 
 @Component
 public class EndpointService {

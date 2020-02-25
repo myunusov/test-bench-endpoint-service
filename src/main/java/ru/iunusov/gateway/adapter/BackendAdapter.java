@@ -10,7 +10,7 @@ import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
-import ru.iunusov.gateway.domain.User;
+import ru.iunusov.gateway.service.dto.User;
 
 @Service
 public class BackendAdapter {
