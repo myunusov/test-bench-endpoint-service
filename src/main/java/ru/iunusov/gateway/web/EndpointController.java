@@ -25,4 +25,9 @@ public class EndpointController {
     return users;
   }
 
+  @GetMapping("/projects")
+  public List<Object> getProjects() {
+    throw new IllegalStateException("It's not implemented it");
+  }
+
 }
