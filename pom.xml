@@ -11,7 +11,7 @@
     <artifactId>endpoint</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>endpoint</name>
-    <description>Gateway</description>
+    <description>Endpoint service</description>
 
     <properties>
         <java.version>11</java.version>

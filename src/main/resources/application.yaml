@@ -13,7 +13,7 @@ info:
 
 spring:
   application:
-    name: Gateway
+    name: Enpoint Service
 
 # Zipkin info
   zipkin:
