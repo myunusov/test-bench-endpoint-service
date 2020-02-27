@@ -122,7 +122,6 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- https://gist.github.com/jensens/00f329c292fcb68861ec53abc453c5c7 -->
         <dependency>
             <groupId>io.sentry</groupId>
             <artifactId>sentry</artifactId>
