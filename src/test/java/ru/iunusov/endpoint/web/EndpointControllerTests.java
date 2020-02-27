@@ -1,4 +1,4 @@
-package ru.iunusov.gateway.web;
+package ru.iunusov.endpoint.web;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -6,8 +6,8 @@ import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.web.client.RestClientException;
-import ru.iunusov.gateway.service.EndpointService;
-import ru.iunusov.gateway.service.dto.User;
+import ru.iunusov.endpoint.service.EndpointService;
+import ru.iunusov.endpoint.service.dto.User;
 import static java.util.Collections.singletonList;
 import static org.hamcrest.Matchers.is;
 import static org.mockito.Mockito.when;

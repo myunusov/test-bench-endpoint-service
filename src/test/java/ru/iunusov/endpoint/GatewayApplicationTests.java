@@ -1,4 +1,4 @@
-package ru.iunusov.gateway;
+package ru.iunusov.endpoint;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

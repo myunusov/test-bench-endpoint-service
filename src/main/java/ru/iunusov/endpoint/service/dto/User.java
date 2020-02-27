@@ -1,4 +1,4 @@
-package ru.iunusov.gateway.service.dto;
+package ru.iunusov.endpoint.service.dto;
 
 import java.util.Objects;
 

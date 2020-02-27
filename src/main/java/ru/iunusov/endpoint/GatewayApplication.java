@@ -1,4 +1,4 @@
-package ru.iunusov.gateway;
+package ru.iunusov.endpoint;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

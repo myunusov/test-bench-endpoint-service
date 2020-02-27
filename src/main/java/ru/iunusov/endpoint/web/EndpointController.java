@@ -1,4 +1,4 @@
-package ru.iunusov.gateway.web;
+package ru.iunusov.endpoint.web;
 
 import java.util.List;
 import java.util.Objects;
@@ -8,8 +8,8 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
-import ru.iunusov.gateway.service.EndpointService;
-import ru.iunusov.gateway.service.dto.User;
+import ru.iunusov.endpoint.service.EndpointService;
+import ru.iunusov.endpoint.service.dto.User;
 
 @RestController
 @RequiredArgsConstructor

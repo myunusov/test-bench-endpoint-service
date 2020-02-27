@@ -1,4 +1,4 @@
-package ru.iunusov.gateway.adapter;
+package ru.iunusov.endpoint.adapter;
 
 import java.util.List;
 
@@ -10,7 +10,7 @@ import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
-import ru.iunusov.gateway.service.dto.User;
+import ru.iunusov.endpoint.service.dto.User;
 
 @Service
 public class BackendAdapter {

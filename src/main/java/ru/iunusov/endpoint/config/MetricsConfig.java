@@ -1,4 +1,4 @@
-package ru.iunusov.gateway.config;
+package ru.iunusov.endpoint.config;
 
 import io.github.mweirauch.micrometer.jvm.extras.ProcessMemoryMetrics;
 import io.github.mweirauch.micrometer.jvm.extras.ProcessThreadMetrics;
@@ -42,7 +42,7 @@ public class MetricsConfig {
 
 
     return registry -> registry.config()
-//        .commonTags("application", "gateway");
+//        .commonTags("application", "endpoint");
 //        .commonTags("host", host, "service", service, "region", region)
         .meterFilter(meterFilter)
         .meterFilter(MeterFilter.deny(id -> {

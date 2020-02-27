@@ -1,4 +1,4 @@
-package ru.iunusov.gateway.service;
+package ru.iunusov.endpoint.service;
 
 import java.util.List;
 
@@ -8,8 +8,8 @@ import io.micrometer.core.instrument.Timer;
 import lombok.SneakyThrows;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
-import ru.iunusov.gateway.adapter.BackendAdapter;
-import ru.iunusov.gateway.service.dto.User;
+import ru.iunusov.endpoint.adapter.BackendAdapter;
+import ru.iunusov.endpoint.service.dto.User;
 
 @Component
 public class EndpointService {

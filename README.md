@@ -1,4 +1,4 @@
-# test-bench-gateway-service
-Test bench: gateway service (see Quay)
+# test-bench-endpoint-service
+Test bench: endpoint service (see Quay)
 
-[![Docker Repository on Quay](https://quay.io/repository/maximyunusov/test-bench-gateway-service/status "Docker Repository on Quay")](https://quay.io/repository/maximyunusov/test-bench-gateway-service)
+[![Docker Repository on Quay](https://quay.io/repository/maximyunusov/test-bench-endpoint-service/status "Docker Repository on Quay")](https://quay.io/repository/maximyunusov/test-bench-endpoint-service)

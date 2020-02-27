@@ -1,4 +1,4 @@
-package ru.iunusov.gateway.adapter;
+package ru.iunusov.endpoint.adapter;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

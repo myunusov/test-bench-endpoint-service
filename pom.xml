@@ -8,9 +8,9 @@
         <version>2.2.4.RELEASE</version>
     </parent>
     <groupId>ru.iunusov</groupId>
-    <artifactId>gateway</artifactId>
+    <artifactId>endpoint</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>gateway</name>
+    <name>endpoint</name>
     <description>Gateway</description>
 
     <properties>

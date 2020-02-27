@@ -21,6 +21,6 @@ LABEL maintainer="Maksim Iunusov maksim@iunusov.ru"
 ENV JAVA_HOME=/opt/java-minimal
 ENV PATH="$PATH:$JAVA_HOME/bin"
 COPY --from=packager "$JAVA_HOME" "$JAVA_HOME"
-COPY --from=builder /src/target/gateway-*.jar app.jar
+COPY --from=builder /src/target/endpoint-*.jar app.jar
 EXPOSE 8080
 ENTRYPOINT ["java","-jar","/app.jar"]

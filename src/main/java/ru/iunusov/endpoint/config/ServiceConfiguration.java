@@ -1,4 +1,4 @@
-package ru.iunusov.gateway.config;
+package ru.iunusov.endpoint.config;
 
 import io.sentry.spring.SentryExceptionResolver;
 import org.springframework.boot.web.servlet.ServletContextInitializer;
